@@ -1,12 +1,15 @@
-import { criarUsuario } from "../../services/usuarioService";
+import { criarUsuario, auth } from "../../services/usuarioService";
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export default function Login() {
   const [usuario, setUsuario] = useState({ email: "", senha: "" });
+  const navigate = useNavigate()
 
-  function autenticarUsuario(event) {
+  async function autenticarUsuario(event) {
     event.preventDefault();
-
-    console.log(usuario);
+    await auth(usuario)
+    navigate("/")
     return false;
   }
 
@@ -21,8 +24,10 @@ export default function Login() {
     }));
   }
 
-  function cadastrar(){
-    criarUsuario(usuario)
+  async function cadastrar(){
+    await criarUsuario(usuario)
+    await auth(usuario)
+    navigate("/")
   }
 
 

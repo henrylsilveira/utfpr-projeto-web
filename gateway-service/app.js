@@ -1,11 +1,13 @@
 import express from 'express';
 import httpProxy from 'http-proxy';
+import authorize from './src/middleware/authorize.js'
 
 const port= 2999;
 
 const app = express();
 
 app.use(express.json());
+app.use(authorize)
 
 const SERVICES_API_URL = {
     USUARIOS: 'http://localhost:3002',
