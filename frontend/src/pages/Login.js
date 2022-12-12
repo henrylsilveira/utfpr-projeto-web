@@ -1,4 +1,4 @@
-import { criarUsuario, auth } from "../../services/usuarioService";
+import { criarUsuario, auth } from "../services/UsuarioService";
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
