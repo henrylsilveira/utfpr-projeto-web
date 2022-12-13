@@ -1,12 +1,14 @@
 import express from 'express';
-import httpProxy from 'http-proxy';
+import httpProxy from 'express-http-proxy';
 import authorize from './src/middleware/authorize.js'
+import cors from 'cors'
 
 const port= 2999;
 
 const app = express();
 
 app.use(express.json());
+app.use(cors())
 app.use(authorize)
 
 const SERVICES_API_URL = {

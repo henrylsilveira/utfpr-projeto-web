@@ -1,5 +1,4 @@
 import axios from 'axios'
-import jwt from 'jwt'
 
 async function tokenValido(token) {
     try {

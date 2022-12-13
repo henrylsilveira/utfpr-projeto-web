@@ -7,7 +7,8 @@ async function criarUsuario({email, senha}){
 
 async function auth({email, senha}){
     const response = await api.post('/usuarios/auth', {email, senha})
-    api.defaults.headers['token'] = response.data.token
+    api.defaults.headers.common['token'] = response.data.token
+    console.log(api.defaults)
     return response.data;
 }
 

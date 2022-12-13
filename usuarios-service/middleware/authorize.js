@@ -1,5 +1,6 @@
-import jwt, { decode } from 'jsonwebtoken'
+import jwt from 'jsonwebtoken'
 import { Usuario } from '../src/models/usuario.model.js'
+
 function authorize(req, res, next) {
     const token = req.headers['token']
 
