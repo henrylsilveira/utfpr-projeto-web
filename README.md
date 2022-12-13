@@ -19,5 +19,6 @@ Para iniciar cada projeto utilize
 
 
 ## Authors
-    [PurpleBooth](https://github.com/henrylsilveira)
-    [PurpleBooth](https://github.com/tamaraRibeiro)
+
+https://github.com/henrylsilveira
+https://github.com/tamaraRibeiro
